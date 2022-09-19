@@ -1,4 +1,8 @@
-use bevy::{prelude::OrthographicCameraBundle, render::camera::{OrthographicProjection, DepthCalculation, ScalingMode}, math::Vec3};
+use bevy::{
+    math::Vec3,
+    prelude::OrthographicCameraBundle,
+    render::camera::{DepthCalculation, OrthographicProjection, ScalingMode},
+};
 
 pub fn new_camera_2d() -> OrthographicCameraBundle {
     let far = 1000.0;
@@ -13,5 +17,5 @@ pub fn new_camera_2d() -> OrthographicCameraBundle {
 
     camera.transform.scale = Vec3::new(10., 10., 1.);
 
-    return camera
+    return camera;
 }
